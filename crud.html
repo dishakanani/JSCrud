@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>search and sort</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+    input {
+        border-radius: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div style="text-align: center;">
+        <div style="padding-top: 1pc;">
+            <label for="FName">FirstName :</label>
+            <input type="text" id="FName" value="" size="30px" name="FName">
+        </div><br>
+
+        <div>
+            <label for="LName">LastName :</label>
+            <input type="text" id="LName" value="" size="30px" name="LName">
+        </div><br>
+
+        <div>
+            <label for="Email">Email :</label>
+            <input type="Email" id="Email" value="" size="30px" name="Email"><br>
+        </div><br>
+    </div>
+
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="CheckboxData()">Submit</button>
+    </div>
+
+    <div style="margin-top: 2pc; text-align: center;">
+        <label for="data">Data:</label>
+
+        <select id="data">
+            <option value="FName">First Name</option>
+            <option value="LName">Last name</option>
+            <option value="Email">Email</option>
+        </select>
+        <button onclick="SortData()">Sort</button>
+    </div><br>
+
+    <div style="text-align: center;">
+        <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+        <button onclick="myFunction()">Search</button>
+    </div><br>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr class="table-info">
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th><input id="checkbox-all" type="checkbox"></th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="./crud.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
